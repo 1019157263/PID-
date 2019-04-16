@@ -25,6 +25,8 @@ public final class R {
         public static final int seekBar1=0x7f06000a;
         public static final int sss=0x7f060004;
         public static final int xxx=0x7f060008;
+
+		public static final int lineChart = 0;
     }
     public static final class layout {
         public static final int main=0x7f030000;
