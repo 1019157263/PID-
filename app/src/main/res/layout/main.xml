@@ -20,9 +20,10 @@
 
 			<TextView
 				android:layout_width="30dp"
-				android:layout_height="wrap_content"
+				android:layout_height="match_parent"
 				android:text="P:"
-				android:textAppearance="?android:attr/textAppearanceLarge"/>
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:gravity="center"/>
 
 			<SeekBar
 				android:layout_width="match_parent"
@@ -41,9 +42,10 @@
 
 			<TextView
 				android:layout_width="30dp"
-				android:layout_height="wrap_content"
+				android:layout_height="match_parent"
 				android:text="I:"
-				android:textAppearance="?android:attr/textAppearanceLarge"/>
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:gravity="center"/>
 
 			<SeekBar
 				android:layout_width="match_parent"
@@ -60,9 +62,10 @@
 
 			<TextView
 				android:layout_width="30dp"
-				android:layout_height="wrap_content"
+				android:layout_height="match_parent"
 				android:text="D:"
-				android:textAppearance="?android:attr/textAppearanceLarge"/>
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:gravity="center"/>
 
 			<SeekBar
 				android:layout_width="match_parent"
@@ -113,7 +116,7 @@
 			<TextView
 				android:layout_width="30dp"
 				android:layout_height="match_parent"
-				android:text="init:"
+				android:text="out:"
 				android:textAppearance="?android:attr/textAppearanceLarge"
 				android:textSize="15sp"
 				android:gravity="center"/>
@@ -133,10 +136,11 @@
 
 			<TextView
 				android:layout_width="30dp"
-				android:layout_height="wrap_content"
+				android:layout_height="match_parent"
 				android:text="input:"
 				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:textSize="15sp"/>
+				android:textSize="15sp"
+				android:gravity="center"/>
 
 			<SeekBar
 				android:layout_width="match_parent"
@@ -159,16 +163,31 @@
 
 			<TextView
 				android:layout_width="30dp"
-				android:layout_height="wrap_content"
-				android:text="out:"
+				android:layout_height="match_parent"
+				android:text="T:"
 				android:textAppearance="?android:attr/textAppearanceLarge"
-				android:textSize="15sp"/>
+				android:textSize="15sp"
+				android:gravity="center"/>
 
 			<SeekBar
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:progress="83"
 				android:id="@+id/out"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/xxx">
+
+			<com.github.mikephil.charting.charts.LineChart
+				android:id="@+id/chart1"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_above="@+id/seekBar1"/>
 
 		</LinearLayout>
 
