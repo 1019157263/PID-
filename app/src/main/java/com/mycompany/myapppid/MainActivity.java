@@ -9,12 +9,13 @@ import org.xml.sax.*;
 import java.util.ArrayList;
 import com.github.mikephil.charting.data.*;
 import com.github.mikephil.charting.charts.*;
+import android.view.*;
 
 public class MainActivity extends Activity implements OnSeekBarChangeListener
 {
 
 
-
+    int flag=0;
 
 	@Override
 	public void onProgressChanged(SeekBar p1, int p2, boolean p3)
@@ -106,8 +107,11 @@ public class MainActivity extends Activity implements OnSeekBarChangeListener
 					String bb="";
 					int inta=0;
 					//LineChart chart = (LineChart) findViewById(R.id.chart1);//绑
-					
+					//LineChart chart = (LineChart) findViewById(R.id.chart1);
 					List<Entry> entries = new ArrayList<>();
+					LineDataSet dataSet = new LineDataSet(entries, "Label");
+					dataSet.setDrawCircles(false);//在点上画圆 默认true
+					dataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
 					while(true){
 
 						double Kp=P.getProgress()/10;
@@ -124,7 +128,7 @@ public class MainActivity extends Activity implements OnSeekBarChangeListener
 						en=en+ek;
 
 						double uk=(Kp*ek)+(((Kp*(outs*0.01))/Ti)*en)+((Kp*Td)/(outs*0.01))*ekx;
-						sleep(10);
+						sleep(15);
 						//System.out.println(uk);
 						ix=(int) uk;
 
@@ -135,14 +139,20 @@ public class MainActivity extends Activity implements OnSeekBarChangeListener
 						 bb=bb+aa+",";
 						 System.out.println(bb);
 						 */
-						 entries.add(new Entry(inta, ix));
-						 inta=inta+1;
+						 if(flag==1){
+						     entries.add(new Entry(inta, ix));
+				     		 inta=inta+1;
 
-						LineDataSet dataSet = new LineDataSet(entries, "Label"); // add entries to dataset
+			              	 dataSet = new LineDataSet(entries, "Label"); // add entries to dataset
 
-						LineData lineData = new LineData(dataSet);
-						chart.setData(lineData);
-						chart.invalidate(); // refresh
+						//dataSet.setDrawValues(false);//在点上显示数值 默认true
+				     		dataSet.setDrawCircles(false);//在点上画圆 默认true
+						
+		    				dataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
+			     			LineData lineData = new LineData(dataSet);
+			    			chart.setData(lineData);
+		    				chart.invalidate(); // refresh
+						}
 					}
 				}catch(Exception e){
 					System.out.println("出错");
@@ -153,5 +163,22 @@ public class MainActivity extends Activity implements OnSeekBarChangeListener
 
 
     }
+
+	public void onButton1Click(View view) 
+    {
+
+		flag=1;
+		
+	}
+	
+	public void onButton2Click(View view) 
+    {
+
+		flag=0;
+
+	}
+	
+	
+	
 
 }

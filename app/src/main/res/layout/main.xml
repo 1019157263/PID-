@@ -153,7 +153,26 @@
 		<LinearLayout
 			android:orientation="horizontal"
 			android:layout_width="match_parent"
-			android:layout_height="50dp"/>
+			android:layout_height="30dp"
+			android:gravity="center">
+
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Start Server"
+				android:textSize="10sp"
+				android:id="@+id/mainButton1"
+				android:onClick="onButton1Click"/>
+
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Stop Server"
+				android:textSize="10sp"
+				android:onClick="onButton2Click"
+				android:id="@+id/mainButton2"/>
+
+		</LinearLayout>
 
 		<LinearLayout
 			android:orientation="horizontal"
