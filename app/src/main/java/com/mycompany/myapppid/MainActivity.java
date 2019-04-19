@@ -128,7 +128,7 @@ public class MainActivity extends Activity implements OnSeekBarChangeListener
 						en=en+ek;
 
 						double uk=(Kp*ek)+(((Kp*(outs*0.01))/Ti)*en)+((Kp*Td)/(outs*0.01))*ekx;
-						sleep(15);
+						Thread.sleep(15);
 						//System.out.println(uk);
 						ix=(int) uk;
 

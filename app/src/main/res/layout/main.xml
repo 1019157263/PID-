@@ -16,7 +16,8 @@
 			android:orientation="horizontal"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:gravity="center">
+			android:gravity="center"
+			android:background="#FF0F00">
 
 			<TextView
 				android:layout_width="30dp"
@@ -38,7 +39,8 @@
 			android:orientation="horizontal"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:gravity="center">
+			android:gravity="center"
+			android:background="#FF0000">
 
 			<TextView
 				android:layout_width="30dp"
@@ -58,7 +60,8 @@
 		<LinearLayout
 			android:orientation="horizontal"
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
+			android:layout_height="wrap_content"
+			android:background="#FF0F00">
 
 			<TextView
 				android:layout_width="30dp"
@@ -111,7 +114,8 @@
 			android:orientation="horizontal"
 			android:layout_width="match_parent"
 			android:layout_height="30dp"
-			android:gravity="center">
+			android:gravity="center"
+			android:background="#0084FF">
 
 			<TextView
 				android:layout_width="30dp"
@@ -132,7 +136,8 @@
 			android:orientation="horizontal"
 			android:layout_width="match_parent"
 			android:layout_height="30dp"
-			android:gravity="center">
+			android:gravity="center"
+			android:background="#00FF15">
 
 			<TextView
 				android:layout_width="30dp"
